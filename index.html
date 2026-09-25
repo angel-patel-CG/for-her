@@ -1,0 +1,2494 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Dhyani ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    color:#493653;
+    background:#eee5f5;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   DREAMY BACKGROUND
+===================================================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-10;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eee5f5,
+        #f9eef9,
+        #e6def2
+    );
+}
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(75px);
+    opacity:.45;
+
+    animation:drift 14s infinite alternate ease-in-out;
+}
+
+.orb.one{
+    width:400px;
+    height:400px;
+    background:#c5a5db;
+    top:-130px;
+    left:-100px;
+}
+
+.orb.two{
+    width:350px;
+    height:350px;
+    background:#e8b7d8;
+    right:-120px;
+    top:35%;
+    animation-delay:3s;
+}
+
+.orb.three{
+    width:400px;
+    height:400px;
+    background:#ad9bd7;
+    bottom:-180px;
+    left:35%;
+    animation-delay:6s;
+}
+
+@keyframes drift{
+
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+
+    100%{
+        transform:translate(80px,60px) scale(1.18);
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING FLOWERS
+===================================================== */
+
+.floating{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:2;
+}
+
+.floating span{
+    position:absolute;
+    bottom:-50px;
+    opacity:.45;
+
+    animation:floatUp 12s linear infinite;
+}
+
+.floating span:nth-child(1){
+    left:8%;
+    font-size:22px;
+}
+
+.floating span:nth-child(2){
+    left:25%;
+    font-size:18px;
+    animation-delay:3s;
+}
+
+.floating span:nth-child(3){
+    left:48%;
+    font-size:25px;
+    animation-delay:6s;
+}
+
+.floating span:nth-child(4){
+    left:70%;
+    font-size:20px;
+    animation-delay:2s;
+}
+
+.floating span:nth-child(5){
+    left:88%;
+    font-size:23px;
+    animation-delay:5s;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.5;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   🌷 OPENING BOUQUET SCREEN
+===================================================== */
+
+#opening{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #fff7ff 0%,
+        #f2e5f7 45%,
+        #d9c7e7 100%
+    );
+
+    transition:
+    opacity 1s ease,
+    visibility 1s ease;
+
+}
+
+#opening.hide{
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+}
+
+
+.opening-content{
+
+    position:relative;
+
+    max-width:500px;
+
+    padding:30px;
+
+}
+
+
+/* tiny heading */
+
+.opening-small{
+
+    letter-spacing:4px;
+
+    font-size:10px;
+
+    color:#9773a5;
+
+    margin-bottom:20px;
+
+}
+
+
+/* bouquet */
+
+.bouquet{
+
+    position:relative;
+
+    width:260px;
+
+    height:300px;
+
+    margin:auto;
+
+    cursor:pointer;
+
+    animation:breathe 3s infinite ease-in-out;
+
+    transition:.4s;
+
+}
+
+.bouquet:hover{
+
+    transform:scale(1.05) rotate(-2deg);
+
+}
+
+
+/* stems */
+
+.stems{
+
+    position:absolute;
+
+    width:120px;
+
+    height:170px;
+
+    bottom:30px;
+
+    left:70px;
+
+}
+
+.stem{
+
+    position:absolute;
+
+    width:4px;
+
+    height:170px;
+
+    background:#718a68;
+
+    bottom:0;
+
+    left:50%;
+
+    transform-origin:bottom;
+
+    border-radius:10px;
+
+}
+
+.stem:nth-child(1){
+    transform:rotate(-28deg);
+}
+
+.stem:nth-child(2){
+    transform:rotate(-12deg);
+}
+
+.stem:nth-child(3){
+    transform:rotate(8deg);
+}
+
+.stem:nth-child(4){
+    transform:rotate(25deg);
+}
+
+
+/* flowers */
+
+.flower{
+
+    position:absolute;
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:58px;
+
+    filter:drop-shadow(
+        0 8px 10px rgba(80,50,90,.12)
+    );
+
+}
+
+.flower.one{
+    top:5px;
+    left:35px;
+    transform:rotate(-15deg);
+}
+
+.flower.two{
+    top:-10px;
+    left:100px;
+    transform:rotate(10deg);
+}
+
+.flower.three{
+    top:25px;
+    left:155px;
+    transform:rotate(18deg);
+}
+
+.flower.four{
+    top:70px;
+    left:65px;
+    transform:rotate(-10deg);
+}
+
+.flower.five{
+    top:70px;
+    left:125px;
+    transform:rotate(12deg);
+}
+
+
+/* wrapping */
+
+.wrap{
+
+    position:absolute;
+
+    width:170px;
+    height:120px;
+
+    left:45px;
+    bottom:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #d8b6df,
+        #b994c9
+    );
+
+    clip-path:
+    polygon(
+        15% 0,
+        85% 0,
+        100% 100%,
+        0 100%
+    );
+
+    box-shadow:
+    0 15px 30px rgba(70,40,90,.15);
+
+}
+
+.wrap::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    left:50%;
+    top:35px;
+
+    transform:translateX(-50%);
+
+    font-size:35px;
+
+    color:#fff;
+
+}
+
+
+/* opening text */
+
+.opening-title{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:54px;
+
+    color:#59376b;
+
+    margin-top:20px;
+
+}
+
+.opening-title span{
+
+    font-family:"Allura";
+
+    color:#a15cbd;
+
+    font-size:1.2em;
+
+}
+
+.opening-subtitle{
+
+    font-size:12px;
+
+    color:#816b89;
+
+    line-height:1.8;
+
+    margin-top:10px;
+
+}
+
+
+/* click */
+
+.click-hint{
+
+    margin-top:25px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#a15cbd;
+
+    animation:pulse 1.7s infinite;
+
+}
+
+@keyframes pulse{
+
+    50%{
+        opacity:.45;
+        transform:translateY(3px);
+    }
+
+}
+
+@keyframes breathe{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+
+/* bouquet opening particles */
+
+.petal{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:2000;
+
+    font-size:22px;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav{
+
+    position:fixed;
+
+    top:18px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:950px;
+
+    padding:13px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.8);
+
+    border-radius:50px;
+
+    box-shadow:
+    0 10px 40px rgba(70,40,90,.1);
+
+    z-index:100;
+
+}
+
+.logo{
+
+    font-family:"Allura";
+
+    font-size:30px;
+
+    color:#714782;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    color:#654870;
+
+    margin-left:20px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#a15cc1;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:130px 20px 80px;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+}
+
+.mini{
+
+    letter-spacing:5px;
+
+    font-size:10px;
+
+    color:#8d6a9c;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-family:"Cormorant Garamond";
+
+    font-weight:500;
+
+    font-size:clamp(65px,11vw,130px);
+
+    line-height:.75;
+
+    color:#573866;
+
+}
+
+.hero h1 span{
+
+    font-family:"Allura";
+
+    font-size:1.25em;
+
+    color:#a15bbf;
+
+}
+
+.hero-description{
+
+    max-width:570px;
+
+    margin:40px auto 0;
+
+    font-size:14px;
+
+    line-height:2;
+
+    color:#715d79;
+
+}
+
+
+/* =====================================================
+   HERO PHOTO
+===================================================== */
+
+.hero-photo{
+
+    width:160px;
+    height:160px;
+
+    margin:45px auto 0;
+
+    padding:8px;
+
+    background:#fff;
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+    0 20px 45px rgba(70,40,90,.2);
+
+    animation:gentle 4s infinite ease-in-out;
+
+}
+
+.hero-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+@keyframes gentle{
+
+    0%,100%{
+        transform:rotate(-4deg) translateY(0);
+    }
+
+    50%{
+        transform:rotate(3deg) translateY(-8px);
+    }
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    border:none;
+
+    padding:13px 26px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    font-family:"Poppins";
+
+    font-size:13px;
+
+    background:#76518b;
+
+    color:#fff;
+
+    box-shadow:
+    0 12px 25px rgba(80,50,100,.18);
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#9b63b7;
+
+}
+
+.btn-light{
+
+    background:rgba(255,255,255,.65);
+
+    color:#70427e;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+
+    padding:110px 7%;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.section-heading small{
+
+    letter-spacing:4px;
+
+    font-size:10px;
+
+    color:#9870a6;
+
+}
+
+.section-heading h2{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:60px;
+
+    font-weight:500;
+
+    color:#59376b;
+
+}
+
+.section-heading h2 span{
+
+    font-family:"Allura";
+
+    color:#a25bc0;
+
+}
+
+
+/* =====================================================
+   🎂 CAKE SECTION
+===================================================== */
+
+.cake-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.cake-area{
+
+    text-align:center;
+
+    max-width:700px;
+
+}
+
+.cake-area h2{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:65px;
+
+    font-weight:500;
+
+    color:#59376b;
+
+}
+
+.cake-area h2 span{
+
+    font-family:"Allura";
+
+    color:#a15cbd;
+
+}
+
+
+/* cake */
+
+.cake{
+
+    position:relative;
+
+    width:260px;
+
+    height:250px;
+
+    margin:50px auto 25px;
+
+}
+
+
+/* cake bottom */
+
+.cake-bottom{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:20px;
+
+    width:220px;
+
+    height:100px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #d9b3df,
+        #b789c8
+    );
+
+    border-radius:
+    20px 20px 30px 30px;
+
+    box-shadow:
+    0 18px 30px rgba(70,40,90,.18);
+
+}
+
+
+/* cake top */
+
+.cake-top{
+
+    position:absolute;
+
+    bottom:100px;
+
+    left:15px;
+
+    width:230px;
+
+    height:65px;
+
+    background:#fff8fc;
+
+    border-radius:50%;
+
+    border:6px solid #d3acd9;
+
+}
+
+
+/* frosting */
+
+.frosting{
+
+    position:absolute;
+
+    bottom:82px;
+
+    left:30px;
+
+    width:200px;
+
+    height:35px;
+
+    background:#fff8fc;
+
+    border-radius:50%;
+
+}
+
+
+/* candle */
+
+.candle{
+
+    position:absolute;
+
+    bottom:155px;
+
+    width:14px;
+
+    height:55px;
+
+    border-radius:6px;
+
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #a77bc0 0px,
+        #a77bc0 7px,
+        #d9b9e4 7px,
+        #d9b9e4 14px
+    );
+
+}
+
+.candle.one{
+    left:95px;
+}
+
+.candle.two{
+    left:130px;
+}
+
+.candle.three{
+    left:165px;
+}
+
+
+/* flame */
+
+.flame{
+
+    position:absolute;
+
+    width:19px;
+    height:27px;
+
+    top:-24px;
+    left:-2px;
+
+    background:#ffc45c;
+
+    border-radius:
+    50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    animation:flicker .7s infinite alternate;
+
+    box-shadow:
+    0 0 15px #ffc45c;
+
+}
+
+@keyframes flicker{
+
+    from{
+        transform:rotate(-45deg) scale(1);
+    }
+
+    to{
+        transform:rotate(-45deg) scale(1.15);
+    }
+
+}
+
+
+/* cake decorations */
+
+.cake-deco{
+
+    position:absolute;
+
+    bottom:62px;
+
+    left:0;
+
+    width:100%;
+
+    font-size:18px;
+
+    letter-spacing:20px;
+
+}
+
+
+/* candles OFF */
+
+.cake.blown .flame{
+
+    animation:none;
+
+    opacity:0;
+
+    transform:scale(.2);
+
+}
+
+.smoke{
+
+    position:absolute;
+
+    top:-35px;
+    left:2px;
+
+    font-size:18px;
+
+    opacity:0;
+
+}
+
+.cake.blown .smoke{
+
+    opacity:.45;
+
+    animation:smoke 2s ease-out;
+
+}
+
+@keyframes smoke{
+
+    from{
+        transform:translateY(0);
+        opacity:.6;
+    }
+
+    to{
+        transform:translateY(-35px) translateX(10px);
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   PINTEREST PHOTO WALL
+===================================================== */
+
+.photo-wall{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    columns:3 240px;
+
+    column-gap:22px;
+
+}
+
+.photo-card{
+
+    break-inside:avoid;
+
+    margin-bottom:25px;
+
+    background:#fff;
+
+    padding:10px;
+
+    box-shadow:
+    0 15px 35px rgba(70,40,90,.13);
+
+    transition:.4s;
+
+}
+
+.photo-card:nth-child(2){
+    transform:rotate(2deg);
+}
+
+.photo-card:nth-child(4){
+    transform:rotate(-2deg);
+}
+
+.photo-card:nth-child(5){
+    transform:rotate(1deg);
+}
+
+.photo-card:hover{
+
+    transform:
+    translateY(-10px)
+    rotate(0)
+    scale(1.02);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    display:block;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+}
+
+.photo-caption{
+
+    padding:15px 8px 10px;
+
+    text-align:center;
+
+}
+
+.photo-caption h3{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:23px;
+
+    color:#70447f;
+
+}
+
+.photo-caption p{
+
+    font-size:11px;
+
+    color:#89738f;
+
+    margin-top:4px;
+
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-area{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.letter{
+
+    max-width:720px;
+
+    padding:60px 55px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:8px;
+
+    box-shadow:
+    0 25px 60px rgba(70,40,90,.13);
+
+    position:relative;
+
+}
+
+.letter::before{
+
+    content:"♡";
+
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    font-size:25px;
+
+    color:#b17ac4;
+
+}
+
+.letter-title{
+
+    font-family:"Allura";
+
+    font-size:50px;
+
+    color:#805093;
+
+    margin-bottom:20px;
+
+}
+
+.letter p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:21px;
+
+    line-height:1.8;
+
+    color:#59475f;
+
+}
+
+.signature{
+
+    margin-top:25px;
+
+    font-family:"Allura";
+
+    font-size:38px;
+
+    color:#a25cbd;
+
+    text-align:right;
+
+}
+
+
+/* =====================================================
+   LITTLE NOTES
+===================================================== */
+
+.notes{
+
+    max-width:950px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+
+}
+
+.note{
+
+    padding:28px;
+
+    min-height:190px;
+
+    background:rgba(255,255,255,.58);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+.note:hover{
+
+    transform:
+    translateY(-8px)
+    rotate(1deg);
+
+}
+
+.note .emoji{
+
+    font-size:27px;
+
+}
+
+.note h3{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:28px;
+
+    color:#70447f;
+
+    margin:12px 0;
+
+}
+
+.note p{
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    color:#75647b;
+
+}
+
+
+/* =====================================================
+   FINAL SURPRISE
+===================================================== */
+
+.surprise-box{
+
+    max-width:800px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+    background:rgba(255,255,255,.58);
+
+    border-radius:35px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 25px 60px rgba(70,40,90,.12);
+
+}
+
+.surprise-box h2{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:60px;
+
+    font-weight:500;
+
+    color:#59376b;
+
+}
+
+.surprise-box p{
+
+    max-width:550px;
+
+    margin:20px auto 30px;
+
+    line-height:1.9;
+
+    font-size:13px;
+
+    color:#75647b;
+
+}
+
+#secret{
+
+    display:none;
+
+    margin-top:35px;
+
+    animation:reveal .8s ease;
+
+}
+
+#secret h3{
+
+    font-family:"Allura";
+
+    font-size:50px;
+
+    color:#a25cbd;
+
+}
+
+#secret p{
+
+    font-family:"Cormorant Garamond";
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+@keyframes reveal{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    font-family:"Allura";
+
+    font-size:30px;
+
+    color:#805093;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    nav a{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:72px;
+    }
+
+    .section-heading h2{
+        font-size:48px;
+    }
+
+    section{
+        padding:80px 20px;
+    }
+
+    .letter{
+        padding:40px 25px;
+    }
+
+    .letter p{
+        font-size:18px;
+    }
+
+    .cake-area h2{
+        font-size:50px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     🌷 OPENING
+===================================================== -->
+
+<div id="opening">
+
+    <div class="opening-content">
+
+        <div class="opening-small">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+
+        <div
+            class="bouquet"
+            onclick="openBouquet()"
+        >
+
+            <div class="stems">
+
+                <div class="stem"></div>
+                <div class="stem"></div>
+                <div class="stem"></div>
+                <div class="stem"></div>
+
+            </div>
+
+
+            <div class="flower one">
+                🌷
+            </div>
+
+            <div class="flower two">
+                🌸
+            </div>
+
+            <div class="flower three">
+                🌷
+            </div>
+
+            <div class="flower four">
+                🌸
+            </div>
+
+            <div class="flower five">
+                🌷
+            </div>
+
+
+            <div class="wrap"></div>
+
+        </div>
+
+
+        <div class="opening-title">
+
+            for <span>Dhyani</span> ♡
+
+        </div>
+
+
+        <div class="opening-subtitle">
+
+            I made a tiny little corner of the internet
+            just for you...
+
+        </div>
+
+
+        <div class="click-hint">
+
+            ✦ CLICK THE BOUQUET TO OPEN ✦
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+
+</div>
+
+
+<div class="floating">
+
+    <span>♡</span>
+    <span>✦</span>
+    <span>✿</span>
+    <span>♡</span>
+    <span>✧</span>
+
+</div>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<nav>
+
+    <div class="logo">
+        for Dhyani ♡
+    </div>
+
+    <div>
+
+        <a href="#home">home</a>
+
+        <a href="#cake">cake</a>
+
+        <a href="#memories">memories</a>
+
+        <a href="#letter">letter</a>
+
+        <a href="#surprise">surprise</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="mini">
+            TODAY IS ALL ABOUT YOU
+        </div>
+
+
+        <h1>
+
+            Happy
+
+            <br>
+
+            <span>Birthday</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            For someone who deserves a little extra
+            happiness, a little extra sparkle,
+            and a whole lot of love today.
+
+            <br>
+
+            This tiny corner of the internet
+            is just for you, Dhyani. ♡
+
+        </p>
+
+
+        <!-- CHANGE THIS PHOTO -->
+
+        <div class="hero-photo">
+
+            <img
+                src="dhyani.jpg"
+                alt="Dhyani"
+            >
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                href="#cake"
+                class="btn"
+            >
+                🎂 make a wish
+            </a>
+
+            <a
+                href="#memories"
+                class="btn btn-light"
+            >
+                memories ♡
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     🎂 CAKE
+===================================================== -->
+
+<section
+    class="cake-section"
+    id="cake"
+>
+
+    <div class="cake-area">
+
+        <div class="section-heading">
+
+            <small>
+                CLOSE YOUR EYES & MAKE A WISH
+            </small>
+
+        </div>
+
+
+        <h2>
+
+            A cake just for
+
+            <span>you ♡</span>
+
+        </h2>
+
+
+        <div
+            class="cake"
+            id="birthdayCake"
+        >
+
+            <div class="cake-bottom"></div>
+
+            <div class="cake-top"></div>
+
+            <div class="frosting"></div>
+
+
+            <div class="candle one">
+
+                <div class="flame"></div>
+
+                <div class="smoke">
+                    ☁
+                </div>
+
+            </div>
+
+
+            <div class="candle two">
+
+                <div class="flame"></div>
+
+                <div class="smoke">
+                    ☁
+                </div>
+
+            </div>
+
+
+            <div class="candle three">
+
+                <div class="flame"></div>
+
+                <div class="smoke">
+                    ☁
+                </div>
+
+            </div>
+
+
+            <div class="cake-deco">
+                ✦ ♡ ✦ ♡ ✦
+            </div>
+
+        </div>
+
+
+        <p
+            id="cakeText"
+            style="
+            font-family:'Cormorant Garamond';
+            font-size:21px;
+            color:#705c78;
+            margin-bottom:25px;
+            "
+        >
+
+            Make a wish... ✨
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="blowCandles()"
+            id="blowButton"
+        >
+
+            🕯️ Blow the candles
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section id="memories">
+
+    <div class="section-heading">
+
+        <small>
+            LITTLE MOMENTS
+        </small>
+
+        <h2>
+
+            our <span>memories</span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="photo-wall">
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo1.jpg"
+                alt="Memory 1"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    pretty moments ♡
+                </h3>
+
+                <p>
+                    a memory worth keeping
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo2.jpg"
+                alt="Memory 2"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    just us ✿
+                </h3>
+
+                <p>
+                    one of my favourites
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo3.jpg"
+                alt="Memory 3"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    little happiness
+                </h3>
+
+                <p>
+                    moments like this ♡
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo4.jpg"
+                alt="Memory 4"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    forever favourite
+                </h3>
+
+                <p>
+                    keeping this one forever
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo5.jpg"
+                alt="Memory 5"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    golden memories ✦
+                </h3>
+
+                <p>
+                    a little piece of happiness
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo6.jpg"
+                alt="Memory 6"
+            >
+
+            <div class="photo-caption">
+
+                <h3>
+                    one for the scrapbook
+                </h3>
+
+                <p>
+                    beautiful memories ♡
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section id="letter">
+
+    <div class="section-heading">
+
+        <small>
+            A FEW WORDS FOR YOU
+        </small>
+
+        <h2>
+
+            dear <span>Dhyani</span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="letter-area">
+
+        <div class="letter">
+
+            <div class="letter-title">
+                To you ♡
+            </div>
+
+
+            <p>
+
+                Happy Birthday to one of the most
+                special people in my life. ✿
+
+                <br><br>
+
+                I hope this new year brings you
+                countless reasons to smile,
+                beautiful memories you will want
+                to keep forever, and people who
+                remind you just how loved you are.
+
+                <br><br>
+
+                Never forget how special you are.
+                Keep dreaming big, keep laughing
+                loudly, keep being yourself,
+                and never lose that little sparkle
+                that makes you... you.
+
+                <br><br>
+
+                Here's to more memories,
+                more laughter and many,
+                many beautiful days ahead.
+
+            </p>
+
+
+            <div class="signature">
+
+                with love ♡
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NOTES
+===================================================== -->
+
+<section>
+
+    <div class="section-heading">
+
+        <small>
+            LITTLE REMINDERS
+        </small>
+
+        <h2>
+
+            things you should <span>know</span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="notes">
+
+
+        <div class="note">
+
+            <div class="emoji">
+                🌷
+            </div>
+
+            <h3>
+                You matter.
+            </h3>
+
+            <p>
+
+                More than you probably realise.
+                Never underestimate the happiness
+                you bring to people around you.
+
+            </p>
+
+        </div>
+
+
+        <div class="note">
+
+            <div class="emoji">
+                ✨
+            </div>
+
+            <h3>
+                Keep shining.
+            </h3>
+
+            <p>
+
+                There is something beautiful
+                about being completely yourself.
+                Never change that.
+
+            </p>
+
+        </div>
+
+
+        <div class="note">
+
+            <div class="emoji">
+                💜
+            </div>
+
+            <h3>
+                You are loved.
+            </h3>
+
+            <p>
+
+                Today, tomorrow and on all those
+                random days when you need a
+                little reminder.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL SURPRISE
+===================================================== -->
+
+<section id="surprise">
+
+    <div class="surprise-box">
+
+        <h2>
+            one last surprise...
+        </h2>
+
+
+        <p>
+
+            You made it all the way here.
+
+            <br>
+
+            So obviously there has to be
+            one final little surprise waiting.
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="openSurprise()"
+        >
+
+            open it ♡
+
+        </button>
+
+
+        <div id="secret">
+
+            <h3>
+                Happy Birthday, Dhyani ♡
+            </h3>
+
+            <p>
+
+                May your life always have
+                beautiful chapters,
+
+                <br>
+
+                unexpected happiness,
+
+                <br>
+
+                and people who make
+                ordinary days feel special.
+
+                <br><br>
+
+                Here's to YOU. ✿
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    made especially for Dhyani ♡
+
+</footer>
+
+
+<script>
+
+
+/* =====================================================
+   🌷 BOUQUET OPENING
+===================================================== */
+
+function openBouquet(){
+
+    const opening =
+        document.getElementById("opening");
+
+
+    /* petals */
+
+    const symbols=[
+        "🌸",
+        "🌷",
+        "♡",
+        "✿",
+        "✨",
+        "💜"
+    ];
+
+
+    for(let i=0;i<55;i++){
+
+        const petal=
+            document.createElement("div");
+
+        petal.className="petal";
+
+        petal.innerHTML=
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+
+        petal.style.left=
+            Math.random()*100+"vw";
+
+        petal.style.top=
+            Math.random()*80+"vh";
+
+
+        document.body.appendChild(petal);
+
+
+        const animation=
+            petal.animate(
+
+                [
+
+                    {
+                        transform:
+                        "scale(0) rotate(0deg)",
+
+                        opacity:0
+
+                    },
+
+                    {
+                        transform:
+                        "scale(1.2) rotate(180deg)",
+
+                        opacity:1
+
+                    },
+
+                    {
+                        transform:
+                        "translateY(-150px) scale(0) rotate(360deg)",
+
+                        opacity:0
+
+                    }
+
+                ],
+
+                {
+
+                    duration:
+                    1200+Math.random()*1200,
+
+                    easing:"ease-out"
+
+                }
+
+            );
+
+
+        animation.onfinish=()=>{
+            petal.remove();
+        };
+
+    }
+
+
+    /* hide opening */
+
+    setTimeout(()=>{
+
+        opening.classList.add("hide");
+
+        document.body.style.overflowX="hidden";
+
+    },700);
+
+}
+
+
+/* =====================================================
+   🎂 BLOW CANDLES
+===================================================== */
+
+function blowCandles(){
+
+    const cake=
+        document.getElementById(
+            "birthdayCake"
+        );
+
+    const text=
+        document.getElementById(
+            "cakeText"
+        );
+
+    const button=
+        document.getElementById(
+            "blowButton"
+        );
+
+
+    if(cake.classList.contains("blown"))
+        return;
+
+
+    cake.classList.add("blown");
+
+
+    text.innerHTML=
+        "Wish made... ✨ May it come true! ♡";
+
+
+    button.innerHTML=
+        "✨ Wish made ♡";
+
+
+    button.disabled=true;
+
+
+    /* confetti */
+
+    createConfetti();
+
+}
+
+
+/* =====================================================
+   🎉 CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    const symbols=[
+        "💜",
+        "♡",
+        "✨",
+        "🌸",
+        "✿",
+        "⭐"
+    ];
+
+
+    for(let i=0;i<60;i++){
+
+        const piece=
+            document.createElement("div");
+
+
+        piece.innerHTML=
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+
+        piece.style.position="fixed";
+
+        piece.style.left=
+            Math.random()*100+"vw";
+
+        piece.style.top="-30px";
+
+        piece.style.fontSize=
+            (15+Math.random()*20)+"px";
+
+        piece.style.zIndex="9999";
+
+
+        document.body.appendChild(piece);
+
+
+        const animation=
+            piece.animate(
+
+                [
+
+                    {
+                        transform:
+                        "translateY(0) rotate(0deg)",
+
+                        opacity:1
+                    },
+
+                    {
+
+                        transform:
+                        `translateY(110vh)
+                         rotate(${Math.random()*720}deg)`,
+
+                        opacity:0
+
+                    }
+
+                ],
+
+                {
+
+                    duration:
+                    2500+Math.random()*2500,
+
+                    easing:"linear"
+
+                }
+
+            );
+
+
+        animation.onfinish=()=>{
+            piece.remove();
+        };
+
+    }
+
+}
+
+
+/* =====================================================
+   💌 FINAL SURPRISE
+===================================================== */
+
+function openSurprise(){
+
+    document.getElementById(
+        "secret"
+    ).style.display="block";
+
+
+    createConfetti();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
